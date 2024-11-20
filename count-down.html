@@ -1,0 +1,51 @@
+<style>
+  :host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .count-down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .clock-colon {
+    font-size: 3em;
+  }
+
+  .clock-colon:last-child {
+    display: none;
+  }
+
+  .counter-type {
+    text-transform: capitalize;
+    color: #de4848;
+    font-weight: 800;
+  }
+
+  .time {
+    font-size: 4em;
+    font-weight: bold;
+    line-height: normal;
+  }
+</style>
+
+<div class="count-down">
+  {{#counters}}
+  <div class="counter">
+    <div class="counter-time">
+      <span class="time">{{time}}</span>
+    </div>
+    <div class="counter-type">
+      <span class="type">{{type}}</span>
+    </div>
+  </div>
+  <div class="clock-colon">:</div>
+  {{/counters}}
+</div>
